@@ -136,6 +136,27 @@ a {
   color: var(--text-main);
 }
 
+.nav-switch-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #fda4af;
+  border: 1px solid rgba(225, 29, 72, 0.3);
+  border-radius: var(--radius-full);
+  background: rgba(225, 29, 72, 0.08);
+  transition: all 0.2s ease;
+}
+
+.nav-switch-link:hover {
+  color: #fff;
+  border-color: rgba(225, 29, 72, 0.6);
+  background: rgba(225, 29, 72, 0.18);
+  transform: translateY(-1px);
+}
+
 .btn-nav-order {
   display: inline-flex;
   align-items: center;
