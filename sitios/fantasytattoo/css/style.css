@@ -493,7 +493,7 @@ img {
 
 .gallery-item {
   position: relative;
-  height: 260px;
+  height: 360px;
   border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid var(--border-color);
