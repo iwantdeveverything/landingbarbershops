@@ -5,6 +5,7 @@ Directorio de demostraciones y servicio de páginas web sencillas, rápidas y mo
 ## 🚀 Demostraciones en Vivo
 - **Directorio Principal**: [iwantdeveverything.github.io/landingbarbershops](https://iwantdeveverything.github.io/landingbarbershops/)
 - **Caso Real #1**: [Kraken Barber & Tattoo Studio (Cancún)](https://iwantdeveverything.github.io/landingbarbershops/sitios/kraken/)
+- **Caso Real #2**: [Cabellería Barber Shop (Santo Domingo, RD)](https://iwantdeveverything.github.io/landingbarbershops/sitios/cabelleria/)
 
 ## 📦 Características de la Landing ($800 MXN)
 - 🟢 **Botón directo a WhatsApp**: Con mensaje y servicio pre-seleccionado en 1 clic.
@@ -23,11 +24,8 @@ landingbarbershops/
 ├── js/
 │   └── main.js                # Lógica del simulador móvil y modales
 ├── sitios/
-│   └── kraken/
-│       ├── index.html         # Landing de Kraken Barber & Tattoo Studio Cancún
-│       ├── css/style.css      # Estilos temáticos de Kraken (Kraken Blue #014da1)
-│       ├── js/script.js       # Filtros interactivos y enlaces WhatsApp
-│       └── assets/            # Logo oficial y fotos de alta resolución
+│   ├── kraken/                 # Landing de Kraken Barber & Tattoo Studio Cancún
+│   └── cabelleria/             # Landing de Cabellería Barber Shop Santo Domingo
 ├── LICENSE                     # Licencia GPLv2
 └── README.md
 ```
