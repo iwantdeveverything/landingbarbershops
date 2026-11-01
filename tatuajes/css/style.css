@@ -24,6 +24,8 @@
 
   --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-tattoo: 'Pirata One', 'Cinzel Decorative', serif;
+  --font-display: 'Cinzel Decorative', serif;
 
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -31,6 +33,64 @@
   --radius-pill: 9999px;
 
   --container-max: 1160px;
+}
+
+/* ==========================================================================
+   Tattoo Animations & Visual Effects
+   ========================================================================== */
+@keyframes needle-buzz {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-1px, 1px) rotate(-1.5deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  60% { transform: translate(-1px, -1px) rotate(-1deg); }
+  80% { transform: translate(1px, 1px) rotate(1.5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes ink-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(225, 29, 72, 0.4));
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.06);
+    filter: drop-shadow(0 0 25px rgba(244, 63, 94, 0.75));
+  }
+}
+
+.tattoo-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 28px auto 0;
+  color: var(--accent-red);
+  opacity: 0.85;
+}
+
+.tattoo-divider-line {
+  flex: 1;
+  max-width: 140px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-red), transparent);
+}
+
+.tattoo-divider-icon {
+  width: 26px;
+  height: 26px;
+  animation: ink-pulse 3s infinite ease-in-out;
+}
+
+.tattoo-machine-svg {
+  transition: transform 0.2s ease;
+}
+
+.btn-hero-cta:hover .tattoo-machine-svg,
+.btn-nav-order:hover .tattoo-machine-svg,
+.btn-view-demo:hover .tattoo-machine-svg {
+  animation: needle-buzz 0.15s infinite linear;
 }
 
 *, *::before, *::after {
@@ -117,10 +177,10 @@ img {
 }
 
 .nav-brand-title {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: -0.3px;
+  font-family: var(--font-tattoo);
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
   color: #fff;
 }
 
@@ -213,12 +273,12 @@ img {
 }
 
 .hub-hero-title {
-  font-family: var(--font-heading);
-  font-size: clamp(2.3rem, 5.2vw, 3.8rem);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -1px;
-  max-width: 900px;
+  font-family: var(--font-tattoo);
+  font-size: clamp(2.8rem, 6.2vw, 4.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.8px;
+  max-width: 920px;
   margin: 0 auto 24px;
 }
 
@@ -330,10 +390,11 @@ img {
 }
 
 .section-headline {
-  font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
-  font-weight: 800;
-  letter-spacing: -0.5px;
+  font-family: var(--font-tattoo);
+  font-size: clamp(2.2rem, 4.2vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  line-height: 1.15;
   margin-bottom: 14px;
 }
 

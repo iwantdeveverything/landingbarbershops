@@ -32,10 +32,80 @@
   
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   --font-heading: 'Plus Jakarta Sans', var(--font-sans);
+  --font-tattoo: 'Pirata One', 'Cinzel Decorative', serif;
+  --font-display: 'Cinzel Decorative', serif;
   
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* ==========================================================================
+   Tattoo Animations & Visual Effects
+   ========================================================================== */
+@keyframes needle-buzz {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-1px, 1px) rotate(-1.5deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  60% { transform: translate(-1px, -1px) rotate(-1deg); }
+  80% { transform: translate(1px, 1px) rotate(1.5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes ink-pulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+    filter: drop-shadow(0 0 15px rgba(225, 29, 72, 0.4));
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 25px rgba(244, 63, 94, 0.75));
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
+@keyframes shimmer-sweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.tattoo-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 28px auto 0;
+  color: var(--brand-primary);
+  opacity: 0.85;
+}
+
+.tattoo-divider-line {
+  flex: 1;
+  max-width: 120px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brand-primary), transparent);
+}
+
+.tattoo-divider-icon {
+  width: 28px;
+  height: 28px;
+  animation: ink-pulse 3s infinite ease-in-out;
+}
+
+.tattoo-machine-svg {
+  transition: transform 0.2s ease;
+}
+
+.btn-cta-wa:hover .tattoo-machine-svg,
+.btn-header-wa:hover .tattoo-machine-svg,
+.service-card-btn:hover .tattoo-machine-svg {
+  animation: needle-buzz 0.15s infinite linear;
 }
 
 *, *::before, *::after {
@@ -132,12 +202,12 @@ img {
 }
 
 .brand-text h1 {
-  font-family: var(--font-heading);
-  font-size: 1.15rem;
-  font-weight: 800;
-  line-height: 1.2;
+  font-family: var(--font-tattoo);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.1;
   color: #fff;
-  letter-spacing: -0.2px;
+  letter-spacing: 0.8px;
 }
 
 .brand-text span {
@@ -232,11 +302,11 @@ img {
 }
 
 .hero-title {
-  font-family: var(--font-heading);
-  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.8px;
+  font-family: var(--font-tattoo);
+  font-size: clamp(2.5rem, 5.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
   margin-bottom: 20px;
 }
 
@@ -388,10 +458,11 @@ img {
 }
 
 .section-title {
-  font-family: var(--font-heading);
-  font-size: clamp(1.8rem, 3.2vw, 2.4rem);
-  font-weight: 800;
-  letter-spacing: -0.5px;
+  font-family: var(--font-tattoo);
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.15;
   margin-bottom: 12px;
 }
 
